@@ -1,0 +1,19 @@
+HTTP/1.1: The Workhorse of the Web
+HTTP/1.1, introduced in 1999, revolutionized web communications by allowing multiple resources to be fetched over a single TCP connection, thus reducing latency. However, as web pages became more complex with increased reliance on multimedia content and third-party resources, certain limitations of HTTP/1.1 began to surface:
+
+Head-of-Line Blocking: In HTTP/1.1, each requested resource must wait for its turn to be transmitted, leading to head-of-line blocking. This results in inefficiencies, especially when small resources are held up behind larger ones.
+
+High Latency: Initiating multiple TCP connections for parallel resource retrieval incurs significant overhead, contributing to higher latency and slower page load times.
+
+Redundant Headers: With each request, HTTP/1.1 sends redundant headers, such as cookies and user-agent information, even if they haven't changed since the previous request.
+
+HTTP/2: The Next Evolution
+To address the shortcomings of HTTP/1.1, HTTP/2 emerged as a major upgrade, officially standardized in 2015. It introduced several groundbreaking features to optimize web performance:
+
+Multiplexing: Perhaps the most significant improvement, HTTP/2 enables multiplexing, allowing multiple requests and responses to be interleaved within a single TCP connection. This eliminates head-of-line blocking and improves resource utilization, leading to faster page loads.
+
+Header Compression: HTTP/2 employs header compression techniques like HPACK, which significantly reduce overhead by compressing headers before transmission. This reduces latency and conserves bandwidth, particularly beneficial for mobile devices and slower networks.
+
+Server Push: HTTP/2 introduces server push, empowering servers to proactively push resources to clients before they are explicitly requested. This preemptive approach can prefetch essential assets, further enhancing performance and reducing round-trip times.
+
+Binary Protocol: Unlike HTTP/1.1, which transmits data as plain text, HTTP/2 uses a binary protocol, making it more efficient to parse and process by both servers and clients.
